@@ -108,6 +108,14 @@ function addPunctuation(punctuation) {
   };
 }
 
+function addFirst(element) {
+  const newArray = [];
+  return function originalArr(arr) {
+    newArray.push(element, ...arr);
+    return newArray;
+  };
+}
+
 // Recursive
 
 function rootDigit(n) {
@@ -131,4 +139,5 @@ module.exports = {
   addPunctuation,
   rootDigit,
   convert,
+  addFirst,
 };

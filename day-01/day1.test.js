@@ -9,6 +9,7 @@ const {
   addPunctuation,
   rootDigit,
   convert,
+  addFirst,
 } = require('./index');
 
 describe('day 01 code challenges', () => {
@@ -17,6 +18,8 @@ describe('day 01 code challenges', () => {
       expect(reverseSentence('alchemy rocks gold')).toBe('ymehcla skcor dlog');
     });
   });
+
+  // Primitives
 
   describe('titleCase', () => {
     it('should title case a sentence', () => {
@@ -79,6 +82,16 @@ describe('day 01 code challenges', () => {
     });
   });
 
+  describe('convert', () => {
+    it('should take roman numeral and return integer of equivalent decimal value', () => {});
+    expect(convert('III')).toBe(3);
+    expect(convert('XIX')).toBe(19);
+    expect(convert('XCII')).toBe(92);
+    expect(convert('MCXIV')).toBe(1114);
+  });
+
+  // Higher Order
+
   describe('addPunctuation', () => {
     it('should take a string of punctuation and return a function that also takes strings but returns string plus punctuation', () => {
       const addExcitement = addPunctuation('!!!');
@@ -96,18 +109,31 @@ describe('day 01 code challenges', () => {
     });
   });
 
+  describe('addFirst', () => {
+    it('should return a function that takes an array and returns a new array with element as first element', () => {});
+    const addOrange = addFirst('orange');
+    const addCat = addFirst('cat');
+
+    expect(addOrange(['red', 'blue', 'green'])).toEqual([
+      'orange',
+      'red',
+      'blue',
+      'green',
+    ]);
+    expect(addCat(['dog', 'bird', 'lizard'])).toEqual([
+      'cat',
+      'dog',
+      'bird',
+      'lizard',
+    ]);
+  });
+
+  // Recursive
+
   describe('rootDigit', () => {
     it('takes a number and returns one digit that is the sum of the input digits', () => {});
     expect(rootDigit(123)).toBe(6);
     expect(rootDigit(4322)).toBe(2);
     expect(rootDigit(999888777)).toBe(9);
-  });
-
-  describe('convert', () => {
-    it('should take roman numeral and return integer of equivalent decimal value', () => {});
-    expect(convert('III')).toBe(3);
-    expect(convert('XIX')).toBe(19);
-    expect(convert('XCII')).toBe(92);
-    expect(convert('MCXIV')).toBe(1114);
   });
 });
