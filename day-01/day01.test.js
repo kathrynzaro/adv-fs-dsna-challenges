@@ -11,7 +11,7 @@ const {
   convert,
   addFirst,
   repeat,
-} = require('./index');
+} = require('./day01');
 
 describe('day 01 code challenges', () => {
   describe('reverseSentence', () => {
