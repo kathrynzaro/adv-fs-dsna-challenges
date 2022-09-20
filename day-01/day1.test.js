@@ -6,6 +6,7 @@ const {
   anagrams,
   fizzBuzz,
   multiplesOfN,
+  addPunctuation,
 } = require('./index');
 
 describe('primitive code challenges', () => {
@@ -73,6 +74,23 @@ describe('primitive code challenges', () => {
       expect(multiplesOfN(5)).toEqual([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
       expect(multiplesOfN(25)).toEqual([25, 50]);
       expect(multiplesOfN(75)).toEqual([]);
+    });
+  });
+
+  describe('addPunctuation', () => {
+    it('should take a string of punctuation and return a function that also takes strings but returns string plus punctuation', () => {
+      const addExcitement = addPunctuation('!!!');
+      const addUnsure = addPunctuation('?!?');
+
+      expect(addExcitement('Hello World')).toBe('Hello World!!!');
+      expect(addExcitement('Pokemon, catch em all')).toBe(
+        'Pokemon, catch em all!!!'
+      );
+
+      expect(addUnsure('Hello World')).toBe('Hello World?!?');
+      expect(addUnsure('Pokemon, catch em all')).toBe(
+        'Pokemon, catch em all?!?'
+      );
     });
   });
 });
