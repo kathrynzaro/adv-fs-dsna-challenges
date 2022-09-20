@@ -13,6 +13,11 @@ class Queue {
     return this.#list.shift();
   }
 
+  hasNext() {
+    const next = this.#list.length > 0 ? true : false;
+    return next;
+  }
+
   get count() {
     return this.#list.length;
   }

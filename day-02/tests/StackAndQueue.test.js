@@ -51,4 +51,10 @@ describe('Queue', () => {
     expect(queue.count).toEqual(2);
     expect(queue.list).toEqual(['goose', 'lizard']);
   });
+
+  it('hasNext checks to see if there is an item waiting in the queue', () => {
+    const queue = new Queue(['fox']);
+    expect(queue.count).toEqual(1);
+    expect(queue.hasNext()).toEqual(true);
+  });
 });
