@@ -28,4 +28,6 @@ function oddishOrEvenish(number) {
   }
 }
 
-module.exports = { reverseSentence, titleCase, oddishOrEvenish };
+function at(arr, index) {}
+
+module.exports = { reverseSentence, titleCase, oddishOrEvenish, at };
