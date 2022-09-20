@@ -128,7 +128,15 @@ function rootDigit(n) {
   return sum;
 }
 
-function repeat(txt, n) {}
+function repeat(txt, n) {
+  if (n < 0) {
+    return '';
+  } else if (n === 1) {
+    return txt;
+  } else {
+    return txt + repeat(txt, n - 1);
+  }
+}
 
 module.exports = {
   reverseSentence,
