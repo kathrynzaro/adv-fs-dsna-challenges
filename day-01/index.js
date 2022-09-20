@@ -75,7 +75,15 @@ function addPunctuation(punctuation) {
   };
 }
 
-function rootDigit(n) {}
+function rootDigit(n) {
+  const digits = n.toString().split('');
+  const numbers = digits.map((d) => +d);
+  const sum = numbers.reduce((a, b) => a + b);
+  if (sum > 9) {
+    return rootDigit(sum);
+  }
+  return sum;
+}
 
 module.exports = {
   reverseSentence,

@@ -97,8 +97,8 @@ describe('primitive code challenges', () => {
 
   describe('rootDigit', () => {
     it('takes a number and returns one digit that is the sum of the input digits', () => {});
-    expect(rootDigit(123)).toBe('6');
-    expect(rootDigit(4322)).toBe('2');
-    expect(rootDigit(999888777)).toBe('9');
+    expect(rootDigit(123)).toBe(6);
+    expect(rootDigit(4322)).toBe(2);
+    expect(rootDigit(999888777)).toBe(9);
   });
 });
