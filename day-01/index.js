@@ -57,6 +57,18 @@ function fizzBuzz(number) {
   return arr;
 }
 
+function multiplesOfN(n) {
+  const arr = [];
+  for (let i = 1; n <= 50; i++) {
+    const multiples = i * n;
+    if (i * n > 50) {
+      break;
+    }
+    arr.push(multiples);
+  }
+  return arr;
+}
+
 module.exports = {
   reverseSentence,
   titleCase,
@@ -64,4 +76,5 @@ module.exports = {
   at,
   anagrams,
   fizzBuzz,
+  multiplesOfN,
 };
