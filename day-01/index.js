@@ -23,6 +23,12 @@ function oddishOrEvenish(number) {
   return num % 2 === 0 ? 'Evenish' : 'Oddish';
 }
 
-function at(arr, index) {}
+function at(arr, index) {
+  if (index >= 0) {
+    return arr[index];
+  } else {
+    return arr[arr.length + index];
+  }
+}
 
 module.exports = { reverseSentence, titleCase, oddishOrEvenish, at };
