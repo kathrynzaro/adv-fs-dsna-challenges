@@ -11,6 +11,7 @@ const {
   convert,
   addFirst,
   repeat,
+  fibMemo,
 } = require('./day01');
 
 describe('day 01 code challenges', () => {
@@ -143,5 +144,13 @@ describe('day 01 code challenges', () => {
     expect(repeat('ab', 3)).toBe('ababab');
     expect(repeat('kiwi', 1)).toBe('kiwi');
     expect(repeat('cherry', 2)).toBe('cherrycherry');
+  });
+
+  describe('fibMemo', () => {
+    it('return fibonacci sequence', () => {});
+    expect(fibMemo(0)).toEqual(0);
+    expect(fibMemo(1)).toEqual(1);
+    expect(fibMemo(2)).toEqual(1);
+    expect(fibMemo(10)).toEqual(55);
   });
 });

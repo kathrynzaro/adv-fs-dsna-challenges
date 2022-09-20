@@ -138,6 +138,17 @@ function repeat(txt, n) {
   }
 }
 
+function fibMemo(n, memo = {}) {
+  if (memo[n]) return memo[n];
+
+  if (n === 1 || n === 0) {
+    return n;
+  } else {
+    memo[n] = fibMemo(n - 2, memo) + fibMemo(n - 1, memo);
+    return memo[n];
+  }
+}
+
 module.exports = {
   reverseSentence,
   titleCase,
@@ -151,4 +162,5 @@ module.exports = {
   convert,
   addFirst,
   repeat,
+  fibMemo,
 };
