@@ -44,4 +44,11 @@ describe('Queue', () => {
     expect(queue.count).toEqual(2);
     expect(queue.list).toEqual(['cat', 'fox']);
   });
+
+  it('dequeue should remove item from front', () => {
+    const queue = new Queue(['fox', 'goose', 'lizard']);
+    queue.dequeue();
+    expect(queue.count).toEqual(2);
+    expect(queue.list).toEqual(['goose', 'lizard']);
+  });
 });

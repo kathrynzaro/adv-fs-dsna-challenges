@@ -9,6 +9,10 @@ class Queue {
     this.#list.push(item);
   }
 
+  dequeue() {
+    return this.#list.shift();
+  }
+
   get count() {
     return this.#list.length;
   }
