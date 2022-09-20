@@ -5,6 +5,8 @@ function reverseSentence(str) {
     .join(' ');
 }
 
+// Primitives
+
 function titleCase(sentence) {
   return sentence
     .split(' ')
@@ -69,11 +71,44 @@ function multiplesOfN(n) {
   return arr;
 }
 
+function convert(roman) {
+  const romanInts = {
+    I: 1,
+    V: 5,
+    X: 10,
+    L: 50,
+    C: 100,
+    D: 500,
+    M: 1000,
+  };
+
+  const array = roman.split('');
+  let total = 0;
+
+  for (let i = 0; i < array.length; i++) {
+    const current = array[i];
+    const currentValue = romanInts[current];
+    const next = array[i + 1];
+    const nextValue = romanInts[next];
+
+    if (currentValue < nextValue) {
+      total -= currentValue;
+    } else {
+      total += currentValue;
+    }
+  }
+  return total;
+}
+
+// Higher Order
+
 function addPunctuation(punctuation) {
   return function addEmotion(string) {
     return string + punctuation;
   };
 }
+
+// Recursive
 
 function rootDigit(n) {
   const digits = n.toString().split('');
@@ -95,4 +130,5 @@ module.exports = {
   multiplesOfN,
   addPunctuation,
   rootDigit,
+  convert,
 };

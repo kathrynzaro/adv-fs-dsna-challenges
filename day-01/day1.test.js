@@ -8,9 +8,10 @@ const {
   multiplesOfN,
   addPunctuation,
   rootDigit,
+  convert,
 } = require('./index');
 
-describe('primitive code challenges', () => {
+describe('day 01 code challenges', () => {
   describe('reverseSentence', () => {
     it('should reverse a sentence', () => {
       expect(reverseSentence('alchemy rocks gold')).toBe('ymehcla skcor dlog');
@@ -100,5 +101,13 @@ describe('primitive code challenges', () => {
     expect(rootDigit(123)).toBe(6);
     expect(rootDigit(4322)).toBe(2);
     expect(rootDigit(999888777)).toBe(9);
+  });
+
+  describe('convert', () => {
+    it('should take roman numeral and return integer of equivalent decimal value', () => {});
+    expect(convert('III')).toBe(3);
+    expect(convert('XIX')).toBe(19);
+    expect(convert('XCII')).toBe(92);
+    expect(convert('MCXIV')).toBe(1114);
   });
 });
