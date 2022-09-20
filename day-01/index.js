@@ -31,4 +31,6 @@ function at(arr, index) {
   }
 }
 
+function anagrams(wordOne, wordTwo) {}
+
 module.exports = { reverseSentence, titleCase, oddishOrEvenish, at };
