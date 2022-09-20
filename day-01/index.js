@@ -16,16 +16,11 @@ function titleCase(sentence) {
 }
 
 function oddishOrEvenish(number) {
-  const a = number.toString();
-  let b = 0;
-  for (let i = 0; i < a.length; i++) {
-    b += parseInt(a[i]);
-  }
-  if (b % 2 === 0) {
-    return 'Evenish';
-  } else {
-    return 'Oddish';
-  }
+  let num = 0;
+  String(number)
+    .split('')
+    .map((number) => (num += Number(number)));
+  return num % 2 === 0 ? 'Evenish' : 'Oddish';
 }
 
 function at(arr, index) {}
