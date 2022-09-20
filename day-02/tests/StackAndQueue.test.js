@@ -1,3 +1,4 @@
+const { Queue } = require('../Queue.js');
 const { Stack } = require('../Stack.js');
 
 describe('Stack', () => {
@@ -33,5 +34,14 @@ describe('Stack', () => {
     expect(stack.peek()).toEqual('fox');
     stack.pop();
     expect(stack.list).toEqual([]);
+  });
+});
+
+describe('Queue', () => {
+  it('enqueue should add item to back', () => {
+    const queue = new Queue(['cat']);
+    queue.enqueue('fox');
+    expect(queue.count).toEqual(2);
+    expect(queue.list).toEqual(['cat', 'fox']);
   });
 });
