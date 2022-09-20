@@ -15,4 +15,17 @@ function titleCase(sentence) {
     .join(' ');
 }
 
-module.exports = { reverseSentence, titleCase };
+function oddishOrEvenish(number) {
+  const a = number.toString();
+  let b = 0;
+  for (let i = 0; i < a.length; i++) {
+    b += parseInt(a[i]);
+  }
+  if (b % 2 === 0) {
+    return 'Evenish';
+  } else {
+    return 'Oddish';
+  }
+}
+
+module.exports = { reverseSentence, titleCase, oddishOrEvenish };
