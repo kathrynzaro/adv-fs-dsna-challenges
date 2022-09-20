@@ -128,6 +128,8 @@ function rootDigit(n) {
   return sum;
 }
 
+function repeat(txt, n) {}
+
 module.exports = {
   reverseSentence,
   titleCase,
@@ -140,4 +142,5 @@ module.exports = {
   rootDigit,
   convert,
   addFirst,
+  repeat,
 };

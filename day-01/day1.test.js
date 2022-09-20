@@ -10,6 +10,7 @@ const {
   rootDigit,
   convert,
   addFirst,
+  repeat,
 } = require('./index');
 
 describe('day 01 code challenges', () => {
@@ -135,5 +136,12 @@ describe('day 01 code challenges', () => {
     expect(rootDigit(123)).toBe(6);
     expect(rootDigit(4322)).toBe(2);
     expect(rootDigit(999888777)).toBe(9);
+  });
+
+  describe('repeat', () => {
+    it('takes two params and repeats the string n number of times', () => {});
+    expect(repeat('ab', 3)).toBe('ababab');
+    expect(repeat('kiwi', 1)).toBe('kiwi');
+    expect(repeat('cherry', 2)).toBe('cherrycherry');
   });
 });
