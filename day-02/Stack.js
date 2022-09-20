@@ -12,6 +12,14 @@ class Stack {
   peek() {
     return this.#list[this.#list.length - 1];
   }
+
+  pop() {
+    this.#list.pop();
+  }
+
+  get list() {
+    return this.#list;
+  }
 }
 
 module.exports = { Stack };
