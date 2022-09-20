@@ -75,6 +75,8 @@ function addPunctuation(punctuation) {
   };
 }
 
+function rootDigit(n) {}
+
 module.exports = {
   reverseSentence,
   titleCase,
@@ -84,4 +86,5 @@ module.exports = {
   fizzBuzz,
   multiplesOfN,
   addPunctuation,
+  rootDigit,
 };
