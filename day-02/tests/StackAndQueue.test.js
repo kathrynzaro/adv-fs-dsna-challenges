@@ -76,3 +76,11 @@ describe('Queue', () => {
     expect(queue.dequeue()).toBe(null);
   });
 });
+
+describe('reverse', () => {
+  it('should reverse an array', () => {
+    const stack = new Stack([12, 3, 5, 7]);
+    stack.reverseStack();
+    expect(stack.list).toEqual([7, 5, 3, 12]);
+  });
+});

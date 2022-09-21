@@ -15,8 +15,11 @@ class Stack {
 
   pop() {
     this.#list.pop();
-    const list = this.#list.length === 0 ? null : this.#list;
-    return list;
+    return this.#list.length === 0 ? null : this.#list;
+  }
+
+  reverseStack() {
+    return this.#list.reverse();
   }
 
   get list() {

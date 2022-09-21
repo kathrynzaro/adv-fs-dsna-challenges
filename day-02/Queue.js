@@ -11,13 +11,11 @@ class Queue {
 
   dequeue() {
     this.#list.shift();
-    const list = this.#list.length === 0 ? null : this.#list;
-    return list;
+    return this.#list.length === 0 ? null : this.#list;
   }
 
   hasNext() {
-    const next = this.#list.length >= 1 ? true : false;
-    return next;
+    return this.#list.length >= 1 ? true : false;
   }
 
   get count() {
