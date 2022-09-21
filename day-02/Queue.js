@@ -11,11 +11,8 @@ class Queue {
 
   dequeue() {
     this.#list.shift();
-    if (this.#list.length === 0) {
-      return null;
-    } else {
-      return this.#list;
-    }
+    const list = this.#list.length === 0 ? null : this.#list;
+    return list;
   }
 
   hasNext() {
