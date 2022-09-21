@@ -19,7 +19,7 @@ describe('Stack', () => {
     expect(stack.peek()).toEqual('llama');
   });
 
-  it('stacktest cases', () => {
+  it('stack test cases', () => {
     const stack = new Stack();
     stack.push('fox');
     stack.push('goose');
@@ -34,6 +34,7 @@ describe('Stack', () => {
     expect(stack.peek()).toEqual('fox');
     stack.pop();
     expect(stack.list).toEqual([]);
+    expect(stack.pop()).toBe(null);
   });
 });
 
@@ -72,5 +73,6 @@ describe('Queue', () => {
     expect(queue.hasNext()).toEqual(true);
     queue.dequeue();
     expect(queue.hasNext()).toEqual(false);
+    expect(queue.dequeue()).toBe(null);
   });
 });

@@ -15,6 +15,11 @@ class Stack {
 
   pop() {
     this.#list.pop();
+    if (this.#list.length === 0) {
+      return null;
+    } else {
+      return this.#list;
+    }
   }
 
   get list() {
