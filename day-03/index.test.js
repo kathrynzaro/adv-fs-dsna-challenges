@@ -1,7 +1,7 @@
 const { BinaryTreeNode } = require('.');
 
 describe('node based data structures', () => {
-  it('example test', () => {
+  it('returns a binary tree and adds nodes', () => {
     const B = new BinaryTreeNode('B');
     const A = new BinaryTreeNode('A');
     const C = new BinaryTreeNode('C');
